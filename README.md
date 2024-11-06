@@ -1,3 +1,15 @@
+Deploy and Run:
+1. yarn && yarn build
+2. NEXT_PUBLIC_WALLET_CONNECT_ID={connect-id} yarn dev
+   Get the connect id: You need a projectId from the [WalletConnect Cloud](https://cloud.walletconnect.com/) to run the Hyperlane Warp Route UI successfully. Sign up to WalletConnect Cloud, create new project with AppKit and Next.js and copy the projectId from there.
+
+Get the tokens:
+1. Holesky faucet: https://cloud.google.com/application/web3/faucet/ethereum/holesky
+2. ART faucet: https://discord.com/invite/artelanetwork
+3. USDC on Holesky: send address to Luke.
+
+-----
+
 # Hyperlane Warp Route UI Template
 
 This repo contains an example web interface for interchain tokens built with [Hyperlane Warp Route](https://docs.hyperlane.xyz/docs/reference/applications/warp-routes). Warp is a framework to permisionlessly bridge tokens to any chain.
