@@ -14,4 +14,5 @@ export const APP_URL = 'hyperlane-warp-template.vercel.app';
 export const BRAND_COLOR = Color.primary;
 export const BACKGROUND_COLOR = Color.primary;
 export const BACKGROUND_IMAGE = 'url(/backgrounds/main.svg)';
-export const PROXY_DEPLOYED_URL = 'https://proxy.hyperlane.xyz';
+export const PROXY_DEPLOYED_URL = 'https://api.github.com';
+// export const PROXY_DEPLOYED_URL = 'https://proxy.hyperlane.xyz';
