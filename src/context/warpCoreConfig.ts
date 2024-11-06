@@ -1,4 +1,4 @@
-import { warpRouteConfigs } from '@hyperlane-xyz/registry';
+import { warpRouteConfigs } from '@artela-network/registry';
 import { WarpCoreConfig, WarpCoreConfigSchema } from '@hyperlane-xyz/sdk';
 import { objFilter, objMerge } from '@hyperlane-xyz/utils';
 

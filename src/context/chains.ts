@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { GithubRegistry, chainMetadata } from '@hyperlane-xyz/registry';
+import { GithubRegistry, chainMetadata } from '@artela-network/registry';
 import { ChainMap, ChainMetadata, ChainMetadataSchema } from '@hyperlane-xyz/sdk';
 
 import { PROXY_DEPLOYED_URL } from '../consts/app.ts';

@@ -61,6 +61,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@artela-network/registry@npm:5.0.3":
+  version: 5.0.3
+  resolution: "@artela-network/registry@npm:5.0.3"
+  dependencies:
+    yaml: "npm:2.4.5"
+    zod: "npm:^3.21.2"
+  checksum: 10/f0b02917a8403cdfafee066342a36f3be8051397de4453ff14ce1d0d34c33ecdbf6224602505ce7325bc1d19afb0291d7e26ddf028a3dfa63e7477864594e356
+  languageName: node
+  linkType: hard
+
 "@aws-crypto/crc32@npm:3.0.0":
   version: 3.0.0
   resolution: "@aws-crypto/crc32@npm:3.0.0"
@@ -4036,13 +4046,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hyperlane-xyz/registry@npm:5.0.0":
-  version: 5.0.0
-  resolution: "@hyperlane-xyz/registry@npm:5.0.0"
+"@hyperlane-xyz/registry@npm:4.11.1":
+  version: 4.11.1
+  resolution: "@hyperlane-xyz/registry@npm:4.11.1"
   dependencies:
     yaml: "npm:2.4.5"
     zod: "npm:^3.21.2"
-  checksum: 10/0d2b0066776ddae1fc67abc976a3a2e1bede700f8fa8fab8a0c901a483cb0fb8125aba34b84b9dbdd08503ca94e50d7577359e200b8a4d353c4e45e9e80790e3
+  checksum: 10/72d0de24a8b515b0df723150dc9649c3b3d09ba5246536adcc887b1487c56dc36dab9dc986ba9944662198646a7ec7935c134a0c6dd3879af0f459ab25381d14
   languageName: node
   linkType: hard
 
@@ -4097,6 +4107,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@hyperlane-xyz/warp-ui-template@workspace:."
   dependencies:
+    "@artela-network/registry": "npm:5.0.3"
     "@chakra-ui/next-js": "npm:^2.2.0"
     "@chakra-ui/react": "npm:^2.8.2"
     "@cosmjs/cosmwasm-stargate": "npm:^0.32.4"
@@ -4110,7 +4121,7 @@ __metadata:
     "@emotion/react": "npm:^11.13.0"
     "@emotion/styled": "npm:^11.13.0"
     "@headlessui/react": "npm:^1.7.14"
-    "@hyperlane-xyz/registry": "npm:5.0.0"
+    "@hyperlane-xyz/registry": "npm:4.11.1"
     "@hyperlane-xyz/sdk": "npm:5.6.2"
     "@hyperlane-xyz/utils": "npm:5.6.2"
     "@hyperlane-xyz/widgets": "npm:5.6.2"

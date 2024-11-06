@@ -4,6 +4,7 @@
   "version": "5.1.0",
   "author": "J M Rossy",
   "dependencies": {
+    "@artela-network/registry": "5.0.3",
     "@chakra-ui/next-js": "^2.2.0",
     "@chakra-ui/react": "^2.8.2",
     "@cosmjs/cosmwasm-stargate": "^0.32.4",
@@ -17,7 +18,7 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@headlessui/react": "^1.7.14",
-    "@hyperlane-xyz/registry": "5.0.0",
+    "@hyperlane-xyz/registry": "4.11.1",
     "@hyperlane-xyz/sdk": "5.6.2",
     "@hyperlane-xyz/utils": "5.6.2",
     "@hyperlane-xyz/widgets": "5.6.2",

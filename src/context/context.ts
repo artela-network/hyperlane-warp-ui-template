@@ -1,4 +1,4 @@
-import { IRegistry } from '@hyperlane-xyz/registry';
+import { IRegistry } from '@artela-network/registry';
 import {
   ChainMap,
   ChainMetadata,

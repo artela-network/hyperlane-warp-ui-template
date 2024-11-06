@@ -3,7 +3,7 @@ import {
   eclipsemainnetAddresses,
   solanamainnet,
   solanamainnetAddresses,
-} from '@hyperlane-xyz/registry';
+} from '@artela-network/registry';
 import { ChainMap, ChainMetadata } from '@hyperlane-xyz/sdk';
 
 // A map of chain names to ChainMetadata

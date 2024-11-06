@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { PropsWithChildren } from 'react';
 
-import { ethereum, solanamainnet } from '@hyperlane-xyz/registry';
+import { ethereum, solanamainnet } from '@artela-network/registry';
 import { ProtocolType } from '@hyperlane-xyz/utils';
 
 import { ChainLogo } from '../../components/icons/ChainLogo';
