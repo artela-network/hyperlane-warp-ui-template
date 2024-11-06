@@ -61,13 +61,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@artela-network/registry@npm:5.0.3":
-  version: 5.0.3
-  resolution: "@artela-network/registry@npm:5.0.3"
+"@artela-network/registry@npm:5.0.4":
+  version: 5.0.4
+  resolution: "@artela-network/registry@npm:5.0.4"
   dependencies:
     yaml: "npm:2.4.5"
     zod: "npm:^3.21.2"
-  checksum: 10/f0b02917a8403cdfafee066342a36f3be8051397de4453ff14ce1d0d34c33ecdbf6224602505ce7325bc1d19afb0291d7e26ddf028a3dfa63e7477864594e356
+  checksum: 10/48f8d4300fa6efbb5cf953225daffe35c9dbb0bbccb1e165f391ede599780a9f82663a24029c8b05ac225a97bacc336fb2db54c60c1f62e623cf00feed74d105
   languageName: node
   linkType: hard
 
@@ -4107,7 +4107,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@hyperlane-xyz/warp-ui-template@workspace:."
   dependencies:
-    "@artela-network/registry": "npm:5.0.3"
+    "@artela-network/registry": "npm:5.0.4"
     "@chakra-ui/next-js": "npm:^2.2.0"
     "@chakra-ui/react": "npm:^2.8.2"
     "@cosmjs/cosmwasm-stargate": "npm:^0.32.4"
