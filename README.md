@@ -1,13 +1,13 @@
 ## Deploy and Run:
-1. yarn && yarn build
-2. NEXT_PUBLIC_WALLET_CONNECT_ID={connect-id} yarn dev
+- yarn && yarn build
+- NEXT_PUBLIC_WALLET_CONNECT_ID={projectId} yarn dev
    
-To get the connect id: You need a projectId from the [WalletConnect Cloud](https://cloud.walletconnect.com/) to run the Hyperlane Warp Route UI successfully. Sign up to WalletConnect Cloud, create new project with AppKit and Next.js and copy the projectId from there.
+To get the projectId: You need a projectId from the [WalletConnect Cloud](https://cloud.walletconnect.com/) to run the Hyperlane Warp Route UI successfully. Sign up to WalletConnect Cloud, create new project with AppKit and Next.js and copy the projectId from there.
 
 ## Get test tokens:
-1. Holesky faucet: https://cloud.google.com/application/web3/faucet/ethereum/holesky
-2. ART faucet: https://discord.com/invite/artelanetwork
-3. USDC on Holesky: send address to Luke.
+- Holesky faucet: https://cloud.google.com/application/web3/faucet/ethereum/holesky
+- ART faucet: https://discord.com/invite/artelanetwork
+- USDC on Holesky: contract address 0x16B29F45D3fFFB9a17c1F09e92A8e1446d34eAbc, send EOA address to Luke.
 
 -----
 
