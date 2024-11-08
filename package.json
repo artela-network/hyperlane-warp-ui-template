@@ -86,7 +86,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist cache .next",
-    "dev": "next dev",
+    "dev": "next dev -p 4000",
     "build": "next build",
     "typecheck": "tsc",
     "lint": "next lint",
