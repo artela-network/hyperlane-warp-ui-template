@@ -15,9 +15,10 @@ type Props = {
   chains: ChainName[];
   onChange?: (id: ChainName) => void;
   disabled?: boolean;
+  isMirror?: boolean;
 };
 
-export function ChainSelectField({ name, label, chains, onChange, disabled }: Props) {
+export function ChainSelectField({ name, label, chains, onChange, disabled, isMirror }: Props) {
   const [field, , helpers] = useField<ChainName>(name);
   const { setFieldValue } = useFormikContext<TransferFormValues>();
 
@@ -41,14 +42,14 @@ export function ChainSelectField({ name, label, chains, onChange, disabled }: Pr
       <button
         type="button"
         name={field.name}
-        className={`${styles.base} ${disabled ? styles.disabled : styles.enabled}`}
+        className={`${styles.base} ${disabled ? styles.disabled : styles.enabled} ${isMirror ? 'flex-row-reverse' : ''} ${isMirror ? 'pl-8' : 'pr-8'}`}
         onClick={onClick}
       >
-        <div className="flex items-center gap-3">
+        <div className={`flex items-center gap-3 ${isMirror ? 'flex-row-reverse' : ''}`}>
           <div className="max-w-[1.4rem] sm:max-w-fit">
             <ChainLogo chainName={field.value} size={32} />
           </div>
-          <div className="flex flex-col items-start gap-1">
+          <div className={`flex flex-col gap-1 ${isMirror ? 'items-end' : 'items-start'}`}>
             <label htmlFor={name} className="text-xs text-gray-600">
               {label}
             </label>
@@ -68,7 +69,7 @@ export function ChainSelectField({ name, label, chains, onChange, disabled }: Pr
 }
 
 const styles = {
-  base: 'px-2 py-1.5 w-full flex items-center justify-between text-sm bg-white rounded-lg border border-primary-300 outline-none transition-colors duration-500',
+  base: 'px-2 py-1.5 w-full flex items-center justify-between text-sm bg-white rounded-lg bg-[#E6F4FF] outline-none transition-colors duration-500',
   enabled: 'hover:bg-gray-100 active:scale-95 focus:border-primary-500',
   disabled: 'bg-gray-150 cursor-default',
 };

@@ -25,14 +25,14 @@ export function SolidButton(
   const color = _color ?? 'primary';
 
   const base =
-    'flex items-center justify-center rounded-lg transition-all duration-500 active:scale-95';
+    'flex items-center justify-center rounded-full transition-all duration-500 active:scale-95';
   let baseColors, onHover;
   if (color === 'primary') {
     baseColors = 'bg-primary-500 text-white';
     onHover = 'hover:bg-primary-600';
   } else if (color === 'accent') {
-    baseColors = 'bg-accent-500 text-white';
-    onHover = 'hover:bg-accent-600';
+    baseColors = 'bg-[#0000C9] text-white';
+    onHover = 'hover:bg-[#0000A0]';
   } else if (color === 'green') {
     baseColors = 'bg-green-500 text-white';
     onHover = 'hover:bg-green-600';
@@ -48,7 +48,7 @@ export function SolidButton(
   }
   const onDisabled = 'disabled:bg-gray-300 disabled:text-gray-500';
   const weight = bold ? 'font-semibold' : '';
-  const allClasses = `${base} ${baseColors} ${onHover} ${onDisabled} ${weight} ${classes}`;
+  const allClasses = `${base} ${baseColors} ${onHover} ${onDisabled} ${weight} ${classes} h-12`;
 
   return (
     <button

@@ -21,14 +21,17 @@ export function WalletFloatingButtons() {
   const numReady = readyAccounts.length;
 
   return (
-    <div className="absolute -right-8 top-2 hidden flex-col items-center justify-end gap-4 sm:flex">
+    <div className="hidden items-center justify-between gap-4 mb-4 sm:flex">
+      <div className='text-2xl font-medium'>
+        Bridge Your Assets to and from Artela
+      </div>
       {numReady === 0 && (
         <IconButton
           classes={`p-1 ${styles.roundedCircle} `}
           title="Connect Wallet"
           onClick={() => setShowEnvSelectModal(true)}
         >
-          <WalletIcon color={Color.primary} height={16} width={16} />
+          <WalletIcon color={Color.black} height={20} width={20} />
         </IconButton>
       )}
       {numReady >= 1 && (
@@ -37,7 +40,7 @@ export function WalletFloatingButtons() {
           title="History"
           onClick={() => setIsSideBarOpen(!isSideBarOpen)}
         >
-          <HistoryIcon color={Color.primary} height={20} width={20} />
+          <HistoryIcon color={Color.black} height={24} width={24} />
         </IconButton>
       )}
       <Link
@@ -45,7 +48,7 @@ export function WalletFloatingButtons() {
         target="_blank"
         className={`p-0.5 ${styles.roundedCircle} ${styles.link}`}
       >
-        <DocsIcon color={Color.primary} height={20} width={20} />
+        <DocsIcon color={Color.black} height={24} width={24} />
       </Link>
     </div>
   );

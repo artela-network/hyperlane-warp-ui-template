@@ -13,7 +13,8 @@ import { SolidButton } from '../../components/buttons/SolidButton';
 import { ChevronIcon } from '../../components/icons/Chevron';
 import { TextField } from '../../components/input/TextField';
 import { getIndexForToken, getTokenByIndex, getTokens, getWarpCore } from '../../context/context';
-import SwapIcon from '../../images/icons/swap.svg';
+// import SwapIcon from '../../images/icons/swap.svg';
+import SwapIcon from '../../images/icons/swap-new.svg';
 import { Color } from '../../styles/Color';
 import { logger } from '../../utils/logger';
 import { ChainSelectField } from '../chains/ChainSelectField';
@@ -97,10 +98,11 @@ function SwapChainsButton({ disabled }: { disabled?: boolean }) {
   };
 
   return (
+
     <IconButton
       imgSrc={SwapIcon}
-      width={20}
-      height={20}
+      width={30}
+      height={30}
       title="Swap chains"
       classes={!disabled ? 'hover:rotate-180' : undefined}
       onClick={onClick}
@@ -113,12 +115,12 @@ function ChainSelectSection({ isReview }: { isReview: boolean }) {
   const chains = useMemo(() => getWarpCore().getTokenChains(), []);
 
   return (
-    <div className="mt-4 flex items-center justify-between gap-4">
+    <div className="mt-4 flex items-center justify-between gap-1 relative">
       <ChainSelectField name="origin" label="From" chains={chains} disabled={isReview} />
-      <div className="flex flex-1 flex-col items-center">
+      <div className="flex flex-1 flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <SwapChainsButton disabled={isReview} />
       </div>
-      <ChainSelectField name="destination" label="To" chains={chains} disabled={isReview} />
+      <ChainSelectField name="destination" label="To" chains={chains} disabled={isReview} isMirror />
     </div>
   );
 }
@@ -283,12 +285,11 @@ function MaxButton({ balance, disabled }: { balance?: TokenAmount; disabled?: bo
   };
 
   return (
-    <SolidButton
-      type="button"
+    <button
       onClick={onClick}
-      color="primary"
       disabled={disabled}
-      classes="text-xs absolute right-1 top-2.5 bottom-1 px-2 opacity-90 all:rounded"
+      className='text-[#0000c9] absolute right-1 top-2.5 bottom-1 font-medium text-sm pr-2 hover:text-[#0000A0]'
+
     >
       {isLoading ? (
         <div className="flex items-center">
@@ -297,7 +298,7 @@ function MaxButton({ balance, disabled }: { balance?: TokenAmount; disabled?: bo
       ) : (
         'Max'
       )}
-    </SolidButton>
+    </button>
   );
 }
 
@@ -315,15 +316,13 @@ function SelfButton({ disabled }: { disabled?: boolean }) {
       );
   };
   return (
-    <SolidButton
-      type="button"
+    <button
       onClick={onClick}
-      color="primary"
       disabled={disabled}
-      classes="text-xs absolute right-1 top-2.5 bottom-1 px-2 opacity-90 all:rounded"
+      className='text-[#0000c9] absolute right-1 top-2.5 bottom-1 font-medium text-sm pr-2 hover:text-[#0000A0]'
     >
       Self
-    </SolidButton>
+    </button>
   );
 }
 
@@ -349,9 +348,8 @@ function ReviewDetails({ visible }: { visible: boolean }) {
 
   return (
     <div
-      className={`${
-        visible ? 'max-h-screen duration-1000 ease-in' : 'max-h-0 duration-500'
-      } overflow-hidden transition-all`}
+      className={`${visible ? 'max-h-screen duration-1000 ease-in' : 'max-h-0 duration-500'
+        } overflow-hidden transition-all`}
     >
       <label className="mt-4 block pl-0.5 text-sm text-gray-600">Transactions</label>
       <div className="mt-1.5 space-y-2 break-all rounded border border-gray-400 bg-gray-150 px-2.5 py-2 text-sm">
@@ -388,17 +386,15 @@ function ReviewDetails({ visible }: { visible: boolean }) {
                 {fees?.localQuote && fees.localQuote.amount > 0n && (
                   <p className="flex">
                     <span className="min-w-[6.5rem]">Local Gas (est.)</span>
-                    <span>{`${fees.localQuote.getDecimalFormattedAmount().toFixed(4) || '0'} ${
-                      fees.localQuote.token.symbol || ''
-                    }`}</span>
+                    <span>{`${fees.localQuote.getDecimalFormattedAmount().toFixed(4) || '0'} ${fees.localQuote.token.symbol || ''
+                      }`}</span>
                   </p>
                 )}
                 {fees?.interchainQuote && fees.interchainQuote.amount > 0n && (
                   <p className="flex">
                     <span className="min-w-[6.5rem]">Interchain Gas</span>
-                    <span>{`${fees.interchainQuote.getDecimalFormattedAmount().toFixed(4) || '0'} ${
-                      fees.interchainQuote.token.symbol || ''
-                    }`}</span>
+                    <span>{`${fees.interchainQuote.getDecimalFormattedAmount().toFixed(4) || '0'} ${fees.interchainQuote.token.symbol || ''
+                      }`}</span>
                   </p>
                 )}
               </div>
