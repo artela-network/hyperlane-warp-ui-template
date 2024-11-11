@@ -70,9 +70,8 @@ export function SideBarMenu({
   return (
     <>
       <div
-        className={`fixed right-0 top-0 h-full w-88 transform bg-white bg-opacity-95 shadow-lg transition-transform duration-100 ease-in ${
-          isMenuOpen ? 'z-30 translate-x-0' : 'z-0 translate-x-full'
-        }`}
+        className={`fixed right-0 top-0 h-full w-88 transform bg-white bg-opacity-95 shadow-lg transition-transform duration-100 ease-in ${isMenuOpen ? 'z-30 translate-x-0' : 'z-0 translate-x-full'
+          }`}
       >
         {isMenuOpen && (
           <button
@@ -83,7 +82,7 @@ export function SideBarMenu({
           </button>
         )}
         <div className="flex h-full w-full flex-col overflow-y-auto">
-          <div className="w-full rounded-t-md bg-primary-500 px-3.5 py-2 text-base font-normal tracking-wider text-white">
+          <div className="w-full rounded-t-md bg-[#0000c9] px-3.5 py-2 text-base font-normal tracking-wider text-white">
             Connected Wallets
           </div>
           <div className="my-3 space-y-2 px-3">
@@ -99,7 +98,7 @@ export function SideBarMenu({
               <div className="ml-2">Disconnect all wallets</div>
             </button>
           </div>
-          <div className="mb-4 w-full bg-primary-500 px-3.5 py-2 text-base font-normal tracking-wider text-white">
+          <div className="mb-4 w-full bg-[#0000c9] px-3.5 py-2 text-base font-normal tracking-wider text-white">
             Transfer History
           </div>
           <div className="flex grow flex-col px-3.5">
