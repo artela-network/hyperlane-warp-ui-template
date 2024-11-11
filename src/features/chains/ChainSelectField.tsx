@@ -69,7 +69,7 @@ export function ChainSelectField({ name, label, chains, onChange, disabled, isMi
 }
 
 const styles = {
-  base: 'px-2 py-1.5 w-full flex items-center justify-between text-sm bg-white rounded-lg bg-[#E6F4FF] outline-none transition-colors duration-500',
+  base: 'px-2 py-1.5 w-full flex items-center justify-between text-sm rounded-lg bg-[#E6F4FF] outline-none transition-colors duration-500',
   enabled: 'hover:bg-gray-100 active:scale-95 focus:border-primary-500',
   disabled: 'bg-gray-150 cursor-default',
 };
