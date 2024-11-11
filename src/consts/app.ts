@@ -15,8 +15,8 @@ export const MAIN_FONT = localFont({
 //   fallback: ['sans-serif'],
 // });
 export const APP_NAME = 'ArteBridge';
-export const APP_DESCRIPTION = 'A DApp for Hyperlane Warp Route transfers';
-export const APP_URL = 'hyperlane-warp-template.vercel.app';
+export const APP_DESCRIPTION = 'Bridge Your Assets to and from Artela';
+export const APP_URL = 'hyperlane-warp-ui-template-gray.vercel.app/';
 export const BRAND_COLOR = Color.primary;
 export const BACKGROUND_COLOR = Color.primary;
 export const BACKGROUND_IMAGE = 'url(/backgrounds/bg.png)';
