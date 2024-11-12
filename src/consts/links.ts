@@ -1,6 +1,7 @@
 export const links = {
   home: 'https://artela.network/',
-  explorer: 'https://betanet-scan.artela.network/',
+  explorer: 'https://www.okx.com/web3/explorer/artela-testnet',
+  // explorer: 'https://betanet-scan.artela.network/',
   discord: 'https://discord.com/invite/artelanetwork',
   github: 'https://github.com/artela-network',
   docs: 'https://docs.hyperlane.xyz',

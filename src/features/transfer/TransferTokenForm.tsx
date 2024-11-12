@@ -237,10 +237,14 @@ function ButtonSection({
   };
 
   if (!isReview) {
+    const buttonText = values.origin === 'artelatestnet'
+      ? 'Withdraw to Holesy'
+      : values.destination === 'artelatestnet' ? "Deposit to Artela" : isValidating ? 'Validating...' : 'Continue';
+
     return (
       <ConnectAwareSubmitButton
         chainName={values.origin}
-        text={isValidating ? 'Validating...' : 'Continue'}
+        text={buttonText}
         classes="mt-4 px-3 py-1.5"
       />
     );
@@ -250,7 +254,7 @@ function ButtonSection({
     <div className="mt-4 flex items-center justify-between space-x-4">
       <SolidButton
         type="button"
-        color="primary"
+        color="accent"
         onClick={() => setIsReview(false)}
         classes="px-6 py-1.5"
         icon={<ChevronIcon direction="w" width={10} height={6} color={Color.white} />}

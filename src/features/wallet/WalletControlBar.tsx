@@ -9,22 +9,27 @@ import Wallet from '../../images/icons/wallet.svg';
 import { useIsSsr } from '../../utils/ssr';
 import { useStore } from '../store';
 
-import { useAccounts, useWalletDetails } from './hooks/multiProtocol';
+import { useAccounts, useConnectFns, useWalletDetails } from './hooks/multiProtocol';
 
 export function WalletControlBar() {
   const isSsr = useIsSsr();
 
-  const { setShowEnvSelectModal, setIsSideBarOpen } = useStore((s) => ({
-    setShowEnvSelectModal: s.setShowEnvSelectModal,
+  const { setIsSideBarOpen } = useStore((s) => ({
     setIsSideBarOpen: s.setIsSideBarOpen,
   }));
 
   const { readyAccounts } = useAccounts();
   const walletDetails = useWalletDetails();
+  const connectFns = useConnectFns();
 
   const numReady = readyAccounts.length;
   const firstAccount = readyAccounts[0];
   const firstWallet = walletDetails[firstAccount?.protocol || ProtocolType.Ethereum];
+
+  const connectEVM = () => {
+    const connectFn = connectFns.ethereum;
+    if (connectFn) connectFn();
+  };
 
   if (isSsr) {
     // https://github.com/wagmi-dev/wagmi/issues/542#issuecomment-1144178142
@@ -37,8 +42,8 @@ export function WalletControlBar() {
         {numReady === 0 && (
           <SolidButton
             classes="py-2 px-3"
-            onClick={() => setShowEnvSelectModal(true)}
-            title="Choose wallet"
+            onClick={connectEVM}
+            title="Connect wallet"
             icon={<Image src={Wallet} alt="" width={16} height={16} />}
             color="white"
           >

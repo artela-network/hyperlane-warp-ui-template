@@ -4,23 +4,26 @@ import { PropsWithChildren } from 'react';
 import { APP_NAME, BACKGROUND_COLOR, BACKGROUND_IMAGE } from '../../consts/app';
 import { useStore } from '../../features/store';
 import { SideBarMenu } from '../../features/wallet/SideBarMenu';
-import { WalletEnvSelectionModal } from '../../features/wallet/WalletEnvSelectionModal';
-import { useAccounts } from '../../features/wallet/hooks/multiProtocol';
+import { useAccounts, useConnectFns } from '../../features/wallet/hooks/multiProtocol';
 import { Footer } from '../nav/Footer';
 import { Header } from '../nav/Header';
 
 export function AppLayout({ children }: PropsWithChildren) {
   const { readyAccounts } = useAccounts();
   const numReady = readyAccounts.length;
+  const connectFns = useConnectFns();
 
-  const { showEnvSelectModal, setShowEnvSelectModal, isSideBarOpen, setIsSideBarOpen } = useStore(
+  const { isSideBarOpen, setIsSideBarOpen } = useStore(
     (s) => ({
-      showEnvSelectModal: s.showEnvSelectModal,
-      setShowEnvSelectModal: s.setShowEnvSelectModal,
       isSideBarOpen: s.isSideBarOpen,
       setIsSideBarOpen: s.setIsSideBarOpen,
     }),
   );
+
+  const connectEVM = () => {
+    const connectFn = connectFns.ethereum;
+    if (connectFn) connectFn();
+  };
 
   return (
     <>
@@ -41,15 +44,11 @@ export function AppLayout({ children }: PropsWithChildren) {
         <Footer />
       </div>
 
-      <WalletEnvSelectionModal
-        isOpen={showEnvSelectModal}
-        close={() => setShowEnvSelectModal(false)}
-      />
       {numReady > 0 && (
         <SideBarMenu
           onClose={() => setIsSideBarOpen(false)}
           isOpen={isSideBarOpen}
-          onConnectWallet={() => setShowEnvSelectModal(true)}
+          onConnectWallet={connectEVM}
         />
       )}
     </>
