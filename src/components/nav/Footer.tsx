@@ -42,15 +42,17 @@ export function Footer() {
 
 function FooterLogo() {
   return (
-    <div className="flex items-center justify-center">
-      <div className="ml-2 h-12 w-12 sm:h-14 sm:w-14">
-        <HyperlaneLogo fill={Color.white} />
+    <Link href="https://hyperlane.xyz/" target="_blank">
+      <div className="flex items-center justify-center">
+        <div className="ml-2 h-12 w-12 sm:h-14 sm:w-14">
+          <HyperlaneLogo fill={Color.white} />
+        </div>
+        <div className="ml-6 space-y-1 text-lg font-medium sm:text-xl">
+          <div>Build by </div>
+          <div>Hyperlane</div>
+        </div>
       </div>
-      <div className="ml-6 space-y-1 text-lg font-medium sm:text-xl">
-        <div>Build by </div>
-        <div>Hyperlane</div>
-      </div>
-    </div>
+    </Link>
   );
 }
 
