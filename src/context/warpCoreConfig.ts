@@ -8,7 +8,6 @@ import WarpRoutesYaml from '../consts/warpRoutes.yaml';
 import { validateZodResult } from '../utils/zod.ts';
 
 export function assembleWarpCoreConfig(): WarpCoreConfig {
-  console.log('warpRouteConfigs:', JSON.stringify(warpRouteConfigs, null, 2));
   const resultYaml = WarpCoreConfigSchema.safeParse(WarpRoutesYaml);
   const configYaml = validateZodResult(resultYaml, 'warp core yaml config');
   const resultTs = WarpCoreConfigSchema.safeParse(WarpRoutesTs);

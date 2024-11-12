@@ -21,7 +21,6 @@ import { useAccounts, useDisconnectFns, useWalletDetails } from './hooks/multiPr
 import { AccountInfo } from './hooks/types';
 
 export function SideBarMenu({
-  onConnectWallet,
   isOpen,
   onClose,
 }: {
@@ -150,20 +149,35 @@ function AccountSummary({ account }: { account: AccountInfo }) {
   const walletDetails = useWalletDetails()[account.protocol];
 
   return (
-    <button
-      onClick={onClickCopy}
-      className={`${styles.btn} ${numAddresses > 1 && 'all:cursor-default'}`}
-    >
-      <div className="shrink-0">
-        <WalletLogo walletDetails={walletDetails} size={42} />
-      </div>
-      <div className="mx-3 flex flex-col items-start">
-        <div className="text-sm font-normal text-gray-800">{walletDetails.name || 'Wallet'}</div>
-        <div className="w-64 truncate text-left text-xs">
-          {onlyAddress || `${numAddresses} known addresses`}
+    <div className="flex items-center">
+      <a
+        href={`https://www.okx.com/web3/explorer/artela-testnet/address/${onlyAddress}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.btn} ${numAddresses > 1 && 'all:cursor-default'}`}
+      >
+        <div className="shrink-0">
+          <WalletLogo walletDetails={walletDetails} size={42} />
         </div>
-      </div>
-    </button>
+        <div className="mx-3 flex flex-col items-start">
+          <div className="text-sm font-normal text-gray-800">{walletDetails.name || 'Wallet'}</div>
+          <div className="w-64 truncate text-left text-xs">
+            {onlyAddress || `${numAddresses} known addresses`}
+          </div>
+        </div>
+      </a>
+      {onlyAddress && (
+        <button
+          onClick={onClickCopy}
+          className="ml-2 p-2 hover:bg-gray-100 rounded-full"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        </button>
+      )}
+    </div>
   );
 }
 
