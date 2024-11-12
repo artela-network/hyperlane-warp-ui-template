@@ -1,4 +1,5 @@
 import BigNumber from 'bignumber.js';
+//@ts-ignore
 import { Form, Formik, useFormikContext } from 'formik';
 import { useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -63,7 +64,7 @@ export function TransferTokenForm() {
       validateOnChange={false}
       validateOnBlur={false}
     >
-      {({ isValidating, values }) => (
+      {({ isValidating, values, resetForm }) => (
         <Form className="flex w-full flex-col items-stretch">
           <ChainWalletWarning originChain={values.origin} />
           <ChainSelectSection isReview={isReview} />
@@ -77,6 +78,7 @@ export function TransferTokenForm() {
             isReview={isReview}
             isValidating={isValidating}
             setIsReview={setIsReview}
+            resetForm={resetForm}
           />
         </Form>
       )}
@@ -208,10 +210,12 @@ function ButtonSection({
   isReview,
   isValidating,
   setIsReview,
+  resetForm,
 }: {
   isReview: boolean;
   isValidating: boolean;
   setIsReview: (b: boolean) => void;
+  resetForm: () => void;
 }) {
   const { values } = useFormikContext<TransferFormValues>();
   const isSanctioned = useIsAccountSanctioned();
@@ -219,7 +223,7 @@ function ButtonSection({
   const onDoneTransactions = () => {
     setIsReview(false);
     setTransferLoading(false);
-    // resetForm();
+    resetForm();
   };
   const { triggerTransactions } = useTokenTransfer(onDoneTransactions);
 

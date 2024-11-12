@@ -16,15 +16,15 @@ type FooterLink = {
 };
 
 const footerLinks: FooterLink[] = [
-  { title: 'Docs', url: links.docs, external: true },
-  { title: 'Terms', url: links.tos, external: true },
-  { title: 'Twitter', url: links.twitter, external: true, icon: <Twitter fill="#fff" /> },
+  // { title: 'Docs', url: links.docs, external: true },
+  // { title: 'Terms', url: links.tos, external: true },
   { title: 'Homepage', url: links.home, external: true },
-  { title: 'Privacy', url: links.privacyPolicy, external: true },
-  { title: 'Discord', url: links.discord, external: true, icon: <Discord fill="#fff" /> },
   { title: 'Explorer', url: links.explorer, external: true },
-  { title: 'Bounty', url: links.bounty, external: true },
+  { title: 'Privacy', url: links.privacyPolicy, external: true },
+  { title: 'Twitter', url: links.twitter, external: true, icon: <Twitter fill="#fff" /> },
+  { title: 'Discord', url: links.discord, external: true, icon: <Discord fill="#fff" /> },
   { title: 'Github', url: links.github, external: true, icon: <Github fill="#fff" /> },
+  // { title: 'Bounty', url: links.bounty, external: true },
 ];
 
 export function Footer() {

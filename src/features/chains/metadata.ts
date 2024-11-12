@@ -91,7 +91,7 @@ export function getCosmosKitConfig(): { chains: CosmosChain[]; assets: AssetList
       ],
     };
   });
-
+// @ts-ignore
   return { chains, assets };
 }
 

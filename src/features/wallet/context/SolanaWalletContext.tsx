@@ -4,12 +4,11 @@ import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import '@solana/wallet-adapter-react-ui/styles.css';
 import {
-  BackpackWalletAdapter,
   LedgerWalletAdapter,
   PhantomWalletAdapter,
   SalmonWalletAdapter,
   SolflareWalletAdapter,
-  TrustWalletAdapter,
+  TrustWalletAdapter
 } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 import { PropsWithChildren, useCallback, useMemo } from 'react';
@@ -25,7 +24,6 @@ export function SolanaWalletContext({ children }: PropsWithChildren<unknown>) {
     () => [
       new PhantomWalletAdapter(),
       new SolflareWalletAdapter(),
-      new BackpackWalletAdapter(),
       new SalmonWalletAdapter(),
       new SnapWalletAdapter(),
       new TrustWalletAdapter(),

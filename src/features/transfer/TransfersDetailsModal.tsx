@@ -107,7 +107,7 @@ export function TransfersDetailsModal({
 
   return (
     <Modal
-      showCloseBtn={false}
+      showCloseBtn={true}
       isOpen={isOpen}
       close={onClose}
       title=""
@@ -117,7 +117,7 @@ export function TransfersDetailsModal({
       {isFinal && (
         <div className="flex justify-between">
           <h2 className="font-medium text-gray-600">{date}</h2>
-          <div className="flex items-center font-medium">
+          <div className="flex items-center font-mediu mr-6">
             {isSent ? (
               <h3 className="text-primary-500">Sent</h3>
             ) : (
