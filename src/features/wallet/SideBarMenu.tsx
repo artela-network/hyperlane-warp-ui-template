@@ -21,6 +21,7 @@ import { useAccounts, useDisconnectFns, useWalletDetails } from './hooks/multiPr
 import { AccountInfo } from './hooks/types';
 
 export function SideBarMenu({
+  // onConnectWallet,
   isOpen,
   onClose,
 }: {
@@ -93,7 +94,7 @@ export function SideBarMenu({
             </button> */}
             <button onClick={onClickDisconnect} className={`${styles.btn} pl-2.5`}>
               <Icon src={Logout} alt="" size={20} />
-              <div className="ml-2">Disconnect wallets</div>
+              <div className="ml-2">Disconnect wallet</div>
             </button>
           </div>
           <div className="mb-4 w-full bg-[#0000c9] px-3.5 py-2 text-base font-normal tracking-wider text-white">
@@ -162,7 +163,7 @@ function AccountSummary({ account }: { account: AccountInfo }) {
         <div className="mx-3 flex flex-col items-start">
           <div className="text-sm font-normal text-gray-800">{walletDetails.name || 'Wallet'}</div>
           <div className="w-64 truncate text-left text-xs">
-            {onlyAddress || `${numAddresses} known addresses`}
+            {onlyAddress ? `${onlyAddress.slice(0, 6)}...${onlyAddress.slice(-6)}` : `${numAddresses} known addresses`}
           </div>
         </div>
       </a>
