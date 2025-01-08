@@ -39,10 +39,11 @@ export function ChainSelectListModal({
               </div>
             </div>
             <div className="flex flex-wrap gap-4">
-              {sortedChains.map((c) => (
+              {sortedChains.map((c, index) => (
                 <button
                   key={c}
-                  className="flex flex-col items-center justify-center rounded-2xl w-[172px] h-[211px] bg-[#0000c9]"
+                  className="flex flex-col items-center justify-center rounded-2xl w-[172px] h-[211px] bg-[#0000c9] opacity-0 animate-fadeIn"
+                  style={{ animationDelay: `${index * 100}ms` }}
                   onClick={onSelectChain(c)}
                 >
                   <div className="w-12 h-12 flex items-center justify-center">
