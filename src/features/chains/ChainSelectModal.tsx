@@ -20,6 +20,11 @@ export function ChainSelectListModal({
     };
   };
 
+  const bgColor: string[] = [
+    'bg-[#000aa1]',
+    'bg-gray-250'
+  ]
+
   const sortedChains = useMemo(() => chains.sort(), [chains]);
   console.log(sortedChains);
   if (!isOpen) return null;
@@ -42,14 +47,14 @@ export function ChainSelectListModal({
               {sortedChains.map((c, index) => (
                 <button
                   key={c}
-                  className="flex flex-col items-center justify-center rounded-2xl w-[172px] h-[211px] bg-[#0000c9] opacity-0 animate-fadeIn"
+                  className={`flex flex-col items-center justify-center rounded-2xl w-[172px] h-[211px] ${bgColor[index]} opacity-0 animate-fadeIn`}
                   style={{ animationDelay: `${index * 100}ms` }}
                   onClick={onSelectChain(c)}
                 >
-                  <div className="w-12 h-12 flex items-center justify-center">
+                  <div className="w-20 h-20 flex items-center justify-center">
                     <ChainLogo chainName={c} size={80} background={false} />
                   </div>
-                  <span className="mt-3 text-sm text-white">{getChainDisplayName(c, true)}</span>
+                  <span className="mt-8 text-sm text-white">{getChainDisplayName(c, true)}</span>
                 </button>
               ))}
             </div>
