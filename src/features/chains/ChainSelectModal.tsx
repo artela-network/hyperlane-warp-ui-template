@@ -31,6 +31,7 @@ export function ChainSelectListModal({
       .filter(chain => chain !== 'artelatestnet' && chain !== 'holesky')
       .sort()
     , [chains]);
+
   console.log(sortedChains);
   if (!isOpen) return null;
 
