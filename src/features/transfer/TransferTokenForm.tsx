@@ -114,7 +114,7 @@ function SwapChainsButton({ disabled }: { disabled?: boolean }) {
 }
 
 function ChainSelectSection({ isReview }: { isReview: boolean }) {
-  const chains = useMemo(() => getWarpCore().getTokenChains(), []);
+  const chains = useMemo(() => getWarpCore().getTokenChains().filter(chain => chain !== 'artelatestnet' && chain !== 'holesky'), []);
 
   return (
     <div className="mt-4 flex items-center justify-between gap-1 relative">
@@ -417,10 +417,9 @@ function ReviewDetails({ visible }: { visible: boolean }) {
 function useFormInitialValues(): TransferFormValues {
   return useMemo(() => {
     const firstToken = getTokens()[0];
-    const connectedToken = firstToken.connections?.[0];
     return {
-      origin: firstToken.chainName,
-      destination: connectedToken?.token?.chainName || '',
+      origin: "artela",
+      destination: 'base',
       tokenIndex: getIndexForToken(firstToken),
       amount: '',
       recipient: '',
