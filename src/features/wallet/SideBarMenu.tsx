@@ -152,7 +152,7 @@ function AccountSummary({ account }: { account: AccountInfo }) {
   return (
     <div className="flex items-center">
       <a
-        href={`https://www.okx.com/web3/explorer/artela-testnet/address/${onlyAddress}`}
+        href={`https://www.okx.com/web3/explorer/artela/address/${onlyAddress}`}
         target="_blank"
         rel="noopener noreferrer"
         className={`${styles.btn} ${numAddresses > 1 && 'all:cursor-default'}`}

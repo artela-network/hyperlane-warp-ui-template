@@ -21,9 +21,10 @@ export function ChainSelectListModal({
   };
 
   const bgColor: string[] = [
-    'bg-[#0000a1]',
+    "bg-[#010149]",
     'bg-[#3662e3]',
     'bg-[#bbb1ef]',
+    'bg-[#0000a1]',
   ]
 
   const sortedChains = useMemo(() =>

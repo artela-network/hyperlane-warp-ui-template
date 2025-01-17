@@ -23,7 +23,7 @@ artela:
     - apiUrl: https://artscan.artela.network/api
       family: blockscout
       name: Artela Explorer
-      url: https://artscan.artela.network
+      url: https://www.okx.com/web3/explorer/artela
   blocks:
     confirmations: 1
     estimateBlockTime: 2
