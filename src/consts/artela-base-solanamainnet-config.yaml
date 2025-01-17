@@ -1,11 +1,8 @@
-# A list of Warp Route token configs
-# These configs will be merged with the warp routes in the configured registry
-# The input here is typically the output of the Hyperlane CLI warp deploy command
----
+# yaml-language-server: $schema=../schema.json
 tokens:
-  # ART tokens from artela-base-solanamainnet-config.yaml
   - addressOrDenom: "0x0a78BC3CBBC79C4C6E5d4e5b2bbD042E58e93484"
     chainName: artela
+    # ART is not live yet. Temporarily setting to USDC.
     coinGeckoId: usd-coin
     connections:
       - token: ethereum|base|0x228c5101b2C63b9d620a3e8FEa7eC14263F82569
@@ -36,26 +33,3 @@ tokens:
     name: Artela
     standard: SealevelHypSynthetic
     symbol: ART
-
-  # USDC tokens from USDC - artela-base-config.yaml
-  - addressOrDenom: "0x8d9Bd7E9ec3cd799a659EE650DfF6C799309fA91"
-    chainName: artela
-    connections:
-      - token: ethereum|base|0x01348F639D6e418A5a9673c08c0dDf6ecCB80F37
-    decimals: 6
-    logoURI: /deployments/warp_routes/USDC/logo.svg
-    name: USD Coin
-    standard: EvmHypSynthetic
-    symbol: USDC.a
-  - addressOrDenom: "0x01348F639D6e418A5a9673c08c0dDf6ecCB80F37"
-    chainName: base
-    coinGeckoId: usd-coin
-    collateralAddressOrDenom: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
-    connections:
-      - token: ethereum|artela|0x8d9Bd7E9ec3cd799a659EE650DfF6C799309fA91
-    decimals: 6
-    logoURI: /deployments/warp_routes/USDC/logo.svg
-    name: USD Coin
-    standard: EvmHypCollateral
-    symbol: USDC
-options: {}

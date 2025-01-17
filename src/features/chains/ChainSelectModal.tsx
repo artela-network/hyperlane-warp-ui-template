@@ -25,7 +25,11 @@ export function ChainSelectListModal({
     'bg-gray-250'
   ]
 
-  const sortedChains = useMemo(() => chains.sort(), [chains]);
+  const sortedChains = useMemo(() =>
+    chains
+      .filter(chain => chain !== 'artelatestnet' && chain !== 'holesky')
+      .sort()
+    , [chains]);
   console.log(sortedChains);
   if (!isOpen) return null;
 
