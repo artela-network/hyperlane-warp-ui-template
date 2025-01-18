@@ -19,6 +19,6 @@ export const APP_DESCRIPTION = 'Bridge Your Assets to and from Artela';
 export const APP_URL = 'hyperlane-warp-ui-template-gray.vercel.app/';
 export const BRAND_COLOR = Color.primary;
 export const BACKGROUND_COLOR = Color.primary;
-export const BACKGROUND_IMAGE = 'url(/backgrounds/bg.png)';
+export const BACKGROUND_IMAGE = 'url(/backgrounds/main.svg)';
 export const PROXY_DEPLOYED_URL = 'https://api.github.com';
 // export const PROXY_DEPLOYED_URL = 'https://proxy.hyperlane.xyz';
