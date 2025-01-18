@@ -9,6 +9,7 @@ tokens:
     coinGeckoId: usd-coin
     connections:
       - token: ethereum|base|0x228c5101b2C63b9d620a3e8FEa7eC14263F82569
+      - token: sealevel|solanamainnet|ELAJhVNCRfipNT99YTfPBGTAgyD5x9mEv3DYr9fvRM2C
     decimals: 18
     logoURI: /deployments/warp_routes/ART/logo.svg
     name: Artela
@@ -18,10 +19,22 @@ tokens:
     chainName: base
     connections:
       - token: ethereum|artela|0x0a78BC3CBBC79C4C6E5d4e5b2bbD042E58e93484
+      - token: sealevel|solanamainnet|ELAJhVNCRfipNT99YTfPBGTAgyD5x9mEv3DYr9fvRM2C
     decimals: 18
     logoURI: /deployments/warp_routes/ART/logo.svg
     name: Artela
     standard: EvmHypSynthetic
+    symbol: ART
+  - addressOrDenom: ELAJhVNCRfipNT99YTfPBGTAgyD5x9mEv3DYr9fvRM2C
+    chainName: solanamainnet
+    collateralAddressOrDenom: HzHsoKDY7vqsnpjQQCbu9fsXAgKHEqngzBjMSyLehRPx
+    connections:
+      - token: ethereum|artela|0x0a78BC3CBBC79C4C6E5d4e5b2bbD042E58e93484
+      - token: ethereum|base|0x228c5101b2C63b9d620a3e8FEa7eC14263F82569
+    decimals: 9
+    logoURI: /deployments/warp_routes/ART/logo.svg
+    name: Artela
+    standard: SealevelHypSynthetic
     symbol: ART
 
   # USDC tokens

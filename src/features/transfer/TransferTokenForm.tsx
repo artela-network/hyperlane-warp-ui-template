@@ -313,6 +313,10 @@ function MaxButton({ balance, disabled }: { balance?: TokenAmount; disabled?: bo
 function SelfButton({ disabled }: { disabled?: boolean }) {
   const { values, setFieldValue } = useFormikContext<TransferFormValues>();
   const address = useAccountAddressForChain(values.destination);
+
+  // Hide button if destination is Solana
+  if (values.destination === 'solanamainnet') return null;
+
   const onClick = () => {
     if (disabled) return;
     if (address) setFieldValue('recipient', address);
