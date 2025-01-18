@@ -48,7 +48,7 @@ function FooterLogo() {
           <HyperlaneLogo fill={Color.white} />
         </div>
         <div className="ml-6 space-y-1 text-lg font-medium sm:text-xl">
-          <div>Build by </div>
+          <div>Built by </div>
           <div>Hyperlane</div>
         </div>
       </div>
