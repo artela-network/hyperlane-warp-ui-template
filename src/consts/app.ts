@@ -15,8 +15,8 @@ export const MAIN_FONT = localFont({
 //   fallback: ['sans-serif'],
 // });
 export const APP_NAME = 'ArteBridge';
-export const APP_DESCRIPTION = 'Bridge Your Assets to and from Artela';
-export const APP_URL = 'hyperlane-warp-ui-template-gray.vercel.app/';
+export const APP_DESCRIPTION = 'Artela Bridge is a cross-chain bridging feature built on Hyperlane by Artela. It is designed to enable fast, efficient, and seamless asset transfers across multiple blockchain';
+export const APP_URL = 'artbridge.artela.network/';
 export const BRAND_COLOR = Color.primary;
 export const BACKGROUND_COLOR = Color.primary;
 export const BACKGROUND_IMAGE = 'url(/backgrounds/bg.png)';

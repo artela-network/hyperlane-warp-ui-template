@@ -43,8 +43,13 @@ export default function Document() {
         <meta property="og:url" content={APP_URL} />
         <meta property="og:title" content={APP_NAME} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${APP_URL}/logo.png`} />
+        <meta property="og:image" content={`${APP_URL}/backgrounds/logo.png`} />
         <meta property="og:description" content={APP_DESCRIPTION} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={APP_NAME} />
+        <meta name="twitter:description" content={APP_DESCRIPTION} />
+        <meta name="twitter:image" content={`${APP_URL}/backgrounds/logo.png`} />
       </Head>
       <body className={`${MAIN_FONT.className} font-sans text-black`}>
         <Main />
