@@ -21,7 +21,9 @@ const Home: NextPage = () => {
             <Image src={Icon} alt='FAQs icon' width={8} height={8} />
           </a>
           <a
-            href='https://discord.com/channels/1143699396500934796/1143699397956341782' target='_blank'
+            href='https://discord.com/channels/1143699396500934796/1143699397956341782'
+            target='_blank'
+            title="Submit a ticket on Discord"
             className='flex items-center gap-2 cursor-pointer hover:opacity-80 underline underline-offset-2'>
             Feedback
             <Image src={Icon} alt='Feedback icon' width={8} height={8} />
