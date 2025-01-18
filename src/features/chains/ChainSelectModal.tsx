@@ -21,7 +21,7 @@ export function ChainSelectListModal({
   };
 
   const bgColor: string[] = [
-    "bg-[#010149]",
+    "bg-[#eaf5fd]",
     'bg-[#3662e3]',
     'bg-[#bbb1ef]',
     'bg-[#0000a1]',
@@ -33,7 +33,7 @@ export function ChainSelectListModal({
       .sort()
     , [chains]);
 
-  console.log(sortedChains);
+  // console.log(sortedChains);
   if (!isOpen) return null;
 
   return (
@@ -61,7 +61,7 @@ export function ChainSelectListModal({
                   <div className="w-20 h-20 flex items-center justify-center">
                     <ChainLogo chainName={c} size={80} background={false} />
                   </div>
-                  <span className="mt-4 text-base text-white">{getChainDisplayName(c, true)}</span>
+                  <span className="mt-4 text-base text-[#010010]">{getChainDisplayName(c, true)}</span>
                 </button>
               ))}
             </div>

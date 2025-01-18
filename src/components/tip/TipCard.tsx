@@ -18,7 +18,7 @@ export function TipCard() {
           Make it easy take your tokens interchain
         </p>
         <a
-          href={'https://renaissance.artela.network/arthome/FAQ'}
+          href={'https://renaissance.artela.network/arthome/FAQ?target=18'}
           target="_blank"
           rel="noopener noreferrer"
           className="ml-2 flex items-center rounded-lg bg-gray-100 px-3 py-1.5 text-xs text-primary-500 transition-all hover:bg-gray-200 active:bg-gray-300 sm:text-sm"
