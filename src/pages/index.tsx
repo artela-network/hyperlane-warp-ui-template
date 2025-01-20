@@ -10,40 +10,51 @@ import { WalletFloatingButtons } from '../features/wallet/WalletFloatingButtons'
 const Home: NextPage = () => {
   return (
     <div className="space-y-3 pt-4">
-      <TipCard />
-      <div className="relative">
+      <div className="relative flex flex-col gap-4 items-center">
+        <TipCard />
         <WalletFloatingButtons />
         <TransferTokenCard />
         <div className="grid grid-cols-2 gap-2">
+
+
           {/* USDC.a Token */}
           <AddArtelaNetwork
-            chainName='Artela Mainnet'
-            name='USDC.a'
+            chainName='artela'
+            name='$USDC.a'
             decimals={6}
             symbol='USDC.a'
             image="https://raw.githubusercontent.com/hyperlane-xyz/hyperlane-registry/main/deployments/warp_routes/USDC/logo.svg"
             address='0x8d9Bd7E9ec3cd799a659EE650DfF6C799309fA91'
           />
-
-          {/* ART Token */}
-          <AddArtelaNetwork
-            chainName='Artela Mainnet'
-            name='Artela'
-            decimals={18}
-            symbol='ART'
-            image="https://raw.githubusercontent.com/hyperlane-xyz/hyperlane-registry/main/deployments/warp_routes/ART/logo.svg"
-            address='0x0a78BC3CBBC79C4C6E5d4e5b2bbD042E58e93484'
-          />
-
           {/* WETH.a Token */}
           <AddArtelaNetwork
-            chainName='Artela Mainnet'
-            name='WETH.a'
+            chainName='artela'
+            name='$WETH.a'
             decimals={18}
             symbol='WETH.a'
             image="https://raw.githubusercontent.com/hyperlane-xyz/hyperlane-registry/main/deployments/warp_routes/WETH/logo.svg"
             address='0xfae4e14D01D9E13FB5db20A0329ED0472A2D96C7'
           />
+          {/* ART Token */}
+          <AddArtelaNetwork
+            chainName='base'
+            name='$ART'
+            decimals={18}
+            symbol='ART'
+            image="https://raw.githubusercontent.com/hyperlane-xyz/hyperlane-registry/main/deployments/warp_routes/ART/logo.svg"
+            address='0x228c5101b2C63b9d620a3e8FEa7eC14263F82569'
+          />
+
+          {/* ART Token
+          <AddArtelaNetwork
+            chainName='solana'
+            name='Artela'
+            decimals={9}
+            symbol='ART'
+            image="https://raw.githubusercontent.com/hyperlane-xyz/hyperlane-registry/main/deployments/warp_routes/ART/logo.svg"
+            address='ELAJhVNCRfipNT99YTfPBGTAgyD5x9mEv3DYr9fvRM2C'
+          /> */}
+
         </div>
         <div>
           <div className='flex justify-center gap-8 mt-4'>
