@@ -121,10 +121,12 @@ export const AddArtelaNetwork = ({ chainName, name, symbol, image, address, deci
   };
 
   return (
-    <div className='flex justify-center gap-2 mt-2 min-w-[244px]'>
+    <div className='flex justify-center gap-2 mt-2 sm:min-w-[244px]'>
       <div className='flex w-full justify-between items-center gap-1.5 px-2 py-1 bg-white rounded-lg shadow-sm'>
-        <Image src={image} alt={name} width={18} height={18} className="rounded-full" />
-        <div className='font-medium text-sm'>{name}</div>
+        <div className='flex items-center gap-1'>
+          <Image src={image} alt={name} width={18} height={18} className="rounded-full" />
+          <div className='font-medium text-sm'>{name}</div>
+        </div>
         <div className='text-gray-500 text-sm'>
           {address.slice(0, 4)}...{address.slice(-4)}
         </div>

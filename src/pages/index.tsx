@@ -14,9 +14,7 @@ const Home: NextPage = () => {
         <TipCard />
         <WalletFloatingButtons />
         <TransferTokenCard />
-        <div className="grid grid-cols-2 gap-2">
-
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full px-4 sm:px-0">
           {/* USDC.a Token */}
           <AddArtelaNetwork
             chainName='artela'
@@ -57,10 +55,10 @@ const Home: NextPage = () => {
 
         </div>
         <div>
-          <div className='flex justify-center gap-8 mt-4'>
+          <div className='flex flex-wrap justify-center gap-4 sm:gap-8 mt-4 px-4 sm:px-0'>
             <a
               href='https://renaissance.artela.network/arthome/FAQ' target='_blank'
-              className='flex items-center gap-2 cursor-pointer hover:opacity-80 underline underline-offset-2'>
+              className='flex items-center gap-2 cursor-pointer hover:opacity-80 underline underline-offset-2 text-sm sm:text-base'>
               FAQs
               <Image src={Icon} alt='FAQs icon' width={8} height={8} />
             </a>
@@ -68,7 +66,7 @@ const Home: NextPage = () => {
             <a
               href='https://discord.com/channels/1143699396500934796/1143699397956341782'
               target='_blank'
-              className='flex items-center gap-2 cursor-pointer hover:opacity-80 underline underline-offset-2'>
+              className='flex items-center gap-2 cursor-pointer hover:opacity-80 underline underline-offset-2 text-sm sm:text-base'>
               Feedback
               <Image src={Icon} alt='Feedback icon' width={8} height={8} />
               <Tooltip label="Submit a ticket on Discord" hasArrow>
